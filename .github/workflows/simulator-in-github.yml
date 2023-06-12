@@ -1,6 +1,20 @@
 name: Simulator in GitHub Actions
 run-name: Simulator is flying on GitHub Actions 🚀
-on: [push]
+on: 
+  workflow_dispatch:
+    inputs:
+      clusterName:
+        description: 'Cluster Name'
+        required: true
+        default: 'ActionCluster'
+      totalNodes:
+        description: 'Total Nodes'
+        required: true
+        default: '11'
+      timeToRun:
+        description: 'Time to run'
+        required: false
+        default: '1'
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
@@ -26,5 +40,5 @@ jobs:
       - name: Run Simulator
         shell: bash
         run: |
-          java -jar ${{ steps.packaing-jar.outputs.jar }} "ActionCluster" 9 1
-      - run: echo "🍏 Simulation job status is ${{ job.status }}."
+          java -jar ${{ steps.packaing-jar.outputs.jar }} ${{ inputs.clusterName }} ${{ inputs.totalNodes }} ${{ inputs.timeToRun }}
+      - run: echo "🍏 Simulation job status finished."
