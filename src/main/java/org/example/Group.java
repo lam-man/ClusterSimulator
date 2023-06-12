@@ -30,6 +30,16 @@ public class Group {
         return healthyNodes;
     }
 
+    public List<Node> getUnhealthyNodes() {
+        List<Node> unhealthyNodes = new ArrayList<>();
+        for (Node node : this.nodes) {
+            if (node.getNodeState() != NodeState.RUNNING) {
+                unhealthyNodes.add(node);
+            }
+        }
+        return unhealthyNodes;
+    }
+
     @Override
     public String toString() {
 

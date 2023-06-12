@@ -75,42 +75,47 @@ public class Cluster {
     }
 
     public void probe() {
-        List<String> unavailableGroups = new ArrayList<>();
+        List<Group> unavailableGroups = new ArrayList<>();
         List<Node> unavailableNodes = new ArrayList<>();
 
         int domainIndex = -1;
         Random random = new Random();
         int randomInt = random.nextInt(2);
-        
+
         if (randomInt == 0) {
             domainIndex = Chaos.updateTrigger(updateDomains);
         } else {
             domainIndex = Chaos.faultTrigger(faultDomains);
         }
+
         report();
+
         for (Node node : nodePool) {
             if (node.getNodeState() != NodeState.RUNNING) {
                 Group group = nodeGroupMap.get(node);
-                if (group == null) {
-                    continue;
+                if (group != null && !unavailableGroups.contains(group)) {
+                    unavailableGroups.add(group);
                 }
-                String groupName = group.getGroupName();
-                unavailableGroups.add(groupName);
                 unavailableNodes.add(node);
             }
         }
         // Make sure there is available gruops
         if (unavailableGroups.size() > 0 && unavailableGroups.size() < groups.size()) {
-            for (String groupName : unavailableGroups) {
-                trafficRerouting(groupName);
+            for (Group group : unavailableGroups) {
+                trafficRerouting(group.getGroupName(), "not available and traffic are rerouted to other groups.");
             }
         }
 
         if (unavailableGroups.size() > 0) {
-            reGroup(unavailableNodes);
+            reGroup(unavailableNodes, unavailableGroups);
+            report();
+            try {
+                Thread.sleep(2000);
+            } catch (InterruptedException ex) {
+                ex.printStackTrace();
+            }
         }
 
-        report();
         if (randomInt == 0) {
             Chaos.updateOrFaultFix(updateDomains, domainIndex, NodeState.UPDATING);
         } else {
@@ -124,77 +129,78 @@ public class Cluster {
         }
     }
 
-    private void trafficRerouting(String groupName) {
-        System.out.println(String.format("Group %s is not available and traffic are rerouted to other groups.", groupName));
+    private void trafficRerouting(String groupName, String stateMessage) {
+        System.out.println(String.format("Group %s is %s", groupName, stateMessage));
     }
 
-    private void reGroup(List<Node> unavailableNodes) {
+    private void reGroup(List<Node> unavailableNodes, List<Group> unavailableGroups) {
         System.out.println("===========Re-group started.===========");
-        int replaced = useBackupPool(unavailableNodes);
+        useBackupPool(unavailableNodes, unavailableGroups);
 
-        if (unavailableNodes.size() > 1) {
-            shuffle(unavailableNodes, replaced);
-        } else {
+        if (unavailableGroups.size() > 1) {
+            shuffle(unavailableNodes, unavailableGroups);
+        } else if (unavailableGroups.size() == 1) {
             System.out.println("===========Not enough nodes for shuffling.===========");
+        } else {
+            System.out.println("===========No unavailable groups.===========");
         }
     }
 
-    private void shuffle(List<Node> unavailableNodes, int replaced) {
-        List<Node> allHealthyNodes = new ArrayList<>();
-        int start = replaced > 0 ? replaced - 1 : replaced;
-        for (int i = start; i < unavailableNodes.size(); i++) {
-            Node node = unavailableNodes.get(i);
-            Group group = nodeGroupMap.get(node);
+    private void shuffle(List<Node> unavailableNodes, List<Group> unavailableGroups) {
+        List<Node> allNodesToGroup = new ArrayList<>();
+        for (Group group : unavailableGroups) {
             if (group != null) {
                 List<Node> temp = group.getHealthyNodes();
-                allHealthyNodes.addAll(temp);
+                allNodesToGroup.addAll(temp);
             }
         }
 
-        if (allHealthyNodes.size() < 3) {
+        for (Group group : unavailableGroups) {
+            if (group != null) {
+                List<Node> temp = group.getUnhealthyNodes();
+                allNodesToGroup.addAll(temp);
+            }
+        }
+
+        if (allNodesToGroup.size() < 3) {
             System.out.println("===========Not enough healthy nodes for shuffling and wait for auto recover.===========");
             return;
         }
         System.out.println("===========Fix cluster by shuffle and re-group nodes.===========");
 
-        Collections.shuffle(allHealthyNodes);
         List<List<Node>> shuffledNodes = new ArrayList<>();
-        for (int i = 0; i < allHealthyNodes.size(); i += GROUP_SIZE) {
-            int endIndex = Math.min(i + GROUP_SIZE, shuffledNodes.size());
+        allNodesToGroup.addAll(unavailableNodes);
+        for (int i = 0; i < allNodesToGroup.size(); i += GROUP_SIZE) {
+            int endIndex = Math.min(i + GROUP_SIZE, allNodesToGroup.size());
 
-            List<Node> groupNodes = allHealthyNodes.subList(i, endIndex);
-            if (groupNodes.size() < GROUP_SIZE) {
-                backupPool.addAll(groupNodes);
-                return;
-            }
-
+            List<Node> groupNodes = allNodesToGroup.subList(i, endIndex);
             shuffledNodes.add(groupNodes);
         }
 
-        shuffledNodes.add(unavailableNodes);
-
-        for (Node node : unavailableNodes) {
-            Group group = nodeGroupMap.get(node);
+        List<Group> fixedGroups = new ArrayList<>();
+        for (Group group : unavailableGroups) {
             if (shuffledNodes.size() > 0) {
                 List<Node> newNodes = shuffledNodes.get(0);
-                if (newNodes.size() == GROUP_SIZE) {
-                    group.setNodes(new CopyOnWriteArrayList<>(newNodes));
-                } else {
-                    backupPool.addAll(newNodes);
-                    for (Node availableNode : newNodes) {
-                        availableNode.setInAGroup(false);
-                    }
+                group.setNodes(new ArrayList<>(newNodes));
+                fixedGroups.add(group);
+                for (Node node : newNodes) {
+                    nodeGroupMap.put(node, group);
                 }
                 shuffledNodes.remove(0);
             }
         }
+
+        for (Group group : fixedGroups) {
+            if (group.getHealthyNodes().size() == GROUP_SIZE) {
+                unavailableGroups.remove(group);
+                trafficRerouting(group.getGroupName(), " is fixed and able to accept traffics.");
+            }
+        }
     }
 
-    private int useBackupPool(List<Node> unavailableNodes) {
-        int replaced = 0;
+    private void useBackupPool(List<Node> unavailableNodes, List<Group> unavailableGroups) {
         if (backupPool.size() == 0) {
             System.out.println("===========Backup pool doesn't have any nodes.===========");
-            return replaced;
         }
 
         System.out.println("===========Fix cluster by using nodes from backup pool.===========");
@@ -210,17 +216,20 @@ public class Cluster {
                     currentGroup.addNode(nodeToFill);
                     nodeToFill.setInAGroup(true);
                     nodeGroupMap.put(nodeToFill, currentGroup);
+
                     node.setInAGroup(false);
                     newBackupPool.add(node);
                     nodeGroupMap.remove(node);
-                    replaced++;
+                    if (currentGroup.getHealthyNodes().size() == GROUP_SIZE) {
+                        unavailableGroups.remove(currentGroup);
+                        trafficRerouting(currentGroup.getGroupName(), " is fixed and able to accept traffics.");
+                    }
                 }
             }
         }
         if (newBackupPool.size() > 0) {
             backupPool = newBackupPool;
         }
-        return replaced;
     }
 
     private void initCluster(int totalNodes) {

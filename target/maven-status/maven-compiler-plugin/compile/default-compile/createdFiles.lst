@@ -1,6 +1,6 @@
-org\example\Chaos.class
-org\example\NodeState.class
-org\example\Simulator.class
-org\example\Group.class
-org\example\Node.class
-org\example\Cluster.class
+org/example/Node.class
+org/example/Chaos.class
+org/example/Cluster.class
+org/example/NodeState.class
+org/example/Simulator.class
+org/example/Group.class
