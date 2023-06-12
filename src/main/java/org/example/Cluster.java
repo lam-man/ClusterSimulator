@@ -202,10 +202,10 @@ public class Cluster {
         List<Node> newBackupPool = new ArrayList<>();
         for (Node node : unavailableNodes) {
             if (backupPool.size() > 0) {
-                Group currentGroup = nodeGroupMap.get(node);
-                currentGroup.removeNode(node);
                 Node nodeToFill = backupPool.get(0);
                 if (nodeToFill.getNodeState() == NodeState.RUNNING) {
+                    Group currentGroup = nodeGroupMap.get(node);
+                    currentGroup.removeNode(node);
                     backupPool.remove(0);
                     currentGroup.addNode(nodeToFill);
                     nodeToFill.setInAGroup(true);
