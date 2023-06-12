@@ -1,0 +1,14 @@
+name: Simulator in GitHub Actions
+run-name: Simulator is flying on GitHub Actions 🚀
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Installing needed packages..."
+      - run: apt-get update && sudo apt-get install maven
+      - run: echo "Building the project..."
+      - run: mvn clean compile package
+      - run: echo "Running the project..."
+      - run: java -jar target/simulator-1.0-SNAPSHOT.jar "ActionCluster" 9 1
+      - run: echo "🍏 Simulation job status is ${{ job.status }}."
