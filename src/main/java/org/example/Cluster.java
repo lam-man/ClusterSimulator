@@ -134,6 +134,8 @@ public class Cluster {
 
         if (unavailableNodes.size() > 1) {
             shuffle(unavailableNodes, replaced);
+        } else {
+            System.out.println("===========Not enough nodes for shuffling.===========");
         }
     }
 
