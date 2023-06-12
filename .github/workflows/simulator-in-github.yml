@@ -10,6 +10,9 @@ jobs:
         uses: stCarolas/setup-maven@v4.5
         with:
           maven-version: 3.8.2
+      - name: List files in the repository
+        run: |
+          ls ${{ github.workspace }}
       - run: echo "Building the project..."
       - run: mvn clean compile package
       - run: echo "Running the project..."
