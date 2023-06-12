@@ -10,11 +10,19 @@ jobs:
         uses: stCarolas/setup-maven@v4.5
         with:
           maven-version: 3.8.2
-      - name: List files in the repository
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+      - name: Packging Jar file
+        id: packaing-jar
+        shell: bash
         run: |
-          ls ${{ github.workspace }}
-      - run: echo "Building the project..."
-      - run: mvn clean compile package
-      - run: echo "Running the project..."
-      - run: java -jar target/simulator-1.0-SNAPSHOT.jar "ActionCluster" 9 1
+          mvn clean compile package
+          echo "::set-output name=jar::$(ls target/*.jar)"
+      - name: Run Simulator
+        shell: bash
+        run: |
+          java -jar ${{ steps.packaing-jar.outputs.jar }} "ActionCluster" 9 1
       - run: echo "🍏 Simulation job status is ${{ job.status }}."
