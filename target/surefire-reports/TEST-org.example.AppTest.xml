@@ -11,7 +11,7 @@
     <property name="java.vm.specification.version" value="17"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-17-openjdk-amd64/lib"/>
-    <property name="sun.java.command" value="/mnt/c/Users/linwe/github/ClusterSimulator/target/surefire/surefirebooter-20230612031048232_3.jar /mnt/c/Users/linwe/github/ClusterSimulator/target/surefire 2023-06-12T03-10-48_053-jvmRun1 surefire-20230612031048232_1tmp surefire_0-20230612031048232_2tmp"/>
+    <property name="sun.java.command" value="/mnt/c/Users/linwe/github/ClusterSimulator/target/surefire/surefirebooter-20230612101111919_3.jar /mnt/c/Users/linwe/github/ClusterSimulator/target/surefire 2023-06-12T10-11-11_738-jvmRun1 surefire-20230612101111919_1tmp surefire_0-20230612101111919_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/mnt/c/Users/linwe/github/ClusterSimulator/target/test-classes:/mnt/c/Users/linwe/github/ClusterSimulator/target/classes:/home/wen/.m2/repository/junit/junit/3.8.1/junit-3.8.1.jar:/home/wen/.m2/repository/org/apache/maven/plugins/maven-jar-plugin/3.3.0/maven-jar-plugin-3.3.0.jar:/home/wen/.m2/repository/org/apache/maven/shared/file-management/3.1.0/file-management-3.1.0.jar:/home/wen/.m2/repository/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar:/home/wen/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/home/wen/.m2/repository/org/apache/maven/maven-archiver/3.6.0/maven-archiver-3.6.0.jar:/home/wen/.m2/repository/org/codehaus/plexus/plexus-io/3.4.0/plexus-io-3.4.0.jar:/home/wen/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar:/home/wen/.m2/repository/org/codehaus/plexus/plexus-archiver/4.4.0/plexus-archiver-4.4.0.jar:/home/wen/.m2/repository/org/apache/commons/commons-compress/1.21/commons-compress-1.21.jar:/home/wen/.m2/repository/org/iq80/snappy/snappy/0.4/snappy-0.4.jar:/home/wen/.m2/repository/org/tukaani/xz/1.9/xz-1.9.jar:/home/wen/.m2/repository/org/codehaus/plexus/plexus-interpolation/1.26/plexus-interpolation-1.26.jar:/home/wen/.m2/repository/org/codehaus/plexus/plexus-utils/3.4.2/plexus-utils-3.4.2.jar:/home/wen/.m2/repository/org/apache/maven/plugins/maven-clean-plugin/2.4.1/maven-clean-plugin-2.4.1.jar:/home/wen/.m2/repository/org/apache/maven/maven-plugin-api/2.0.6/maven-plugin-api-2.0.6.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -26,7 +26,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="/mnt/c/Users/linwe/github/ClusterSimulator/target/surefire/surefirebooter-20230612031048232_3.jar"/>
+    <property name="surefire.real.class.path" value="/mnt/c/Users/linwe/github/ClusterSimulator/target/surefire/surefirebooter-20230612101111919_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.7+7-Ubuntu-0ubuntu122.04.2"/>
     <property name="user.name" value="wen"/>

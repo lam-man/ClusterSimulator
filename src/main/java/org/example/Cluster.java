@@ -11,7 +11,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 public class Cluster {
 
     private static final int GROUP_SIZE = 3;
-    private static final int FAULT_DOMAIN_COUNT = 3;
+    private static final double FAULT_DOMAIN_COUNT = 3.0;
     private static final String INDENT = "    ";
     private static final int MIN_UPDATE_DOMAIN = 5;
     private static final int MAX_UPDATE_DOMAIN = 20;
@@ -256,32 +256,59 @@ public class Cluster {
     }
 
     private void setFaultDomains() {
-        int faultDomainSize = totalNodes / FAULT_DOMAIN_COUNT;
+        int faultDomainSize = (int) Math.ceil(totalNodes / FAULT_DOMAIN_COUNT);
         for (int i = 0; i < FAULT_DOMAIN_COUNT; i++) {
             int startIndex = i * faultDomainSize;
             int endIndex = Math.min(startIndex + faultDomainSize, nodePool.size());
             List<Node> domainNodes = nodePool.subList(startIndex, endIndex);
-            faultDomains.add(new CopyOnWriteArrayList<>(domainNodes));
+            faultDomains.add(new ArrayList<>(domainNodes));
         }
+
+        // Loop and print out the fault domains
+        printOutDomains(faultDomains, "FaultDomain");
     }
 
     private void setUpdateDomains() {
         int updateDomainCount = getUpdateDomainCount(totalNodes);
-        int updateDomainSize = totalNodes / updateDomainCount;
+        int updateDomainSize = totalNodes / updateDomainCount < 1 ? 1 : totalNodes / updateDomainCount;
         for (int i = 0; i < updateDomainCount; i++) {
             int startIndex = i * updateDomainSize;
             int endIndex = Math.min(startIndex + updateDomainSize, nodePool.size());
+            if (startIndex >= nodePool.size()) {
+                break;
+            }
             List<Node> domainNodes = nodePool.subList(startIndex, endIndex);
             updateDomains.add(new CopyOnWriteArrayList<>(domainNodes));
         }
+
+        // Loop and print out the update domains
+        printOutDomains(updateDomains, "UpdateDomain");
+    }
+
+    private void printOutDomains(List<List<Node>> domains, String domainType) {
+        StringBuilder sb = new StringBuilder(domainType + ": ");
+        sb.append(System.lineSeparator());
+        for (int i = 0; i < domains.size(); i++) {
+            List<Node> domain = domains.get(i);
+            sb.append(INDENT + domainType + "-" + i + "[ ");
+            for (Node node : domain) {
+                sb.append("Node-" + node.getNodeIndex() + " ");
+            }
+            sb.append("]");
+            if (i != domains.size() - 1) {
+                sb.append(System.lineSeparator());
+            }
+        }
+        System.out.println(sb.toString());
     }
 
     private int getUpdateDomainCount(int totalNodes) {
-        int updateDomainCount = totalNodes / MIN_UPDATE_DOMAIN + MIN_UPDATE_DOMAIN;
+        int groupCount = totalNodes / GROUP_SIZE;
+        int domainSize = groupCount - (groupCount * 4 / 5);
+        int updateDomainCount = totalNodes / domainSize;
+        updateDomainCount = Math.max(updateDomainCount, MIN_UPDATE_DOMAIN);
+        updateDomainCount = Math.min(updateDomainCount, MAX_UPDATE_DOMAIN);
 
-        if (updateDomainCount > MAX_UPDATE_DOMAIN) {
-            return MAX_UPDATE_DOMAIN;
-        }
         return updateDomainCount;
     }
 

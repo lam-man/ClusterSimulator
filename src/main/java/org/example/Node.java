@@ -29,6 +29,10 @@ public class Node {
         this.nodeState = nodeState;
     }
 
+    public int getNodeIndex() {
+        return nodeIndex;
+    }
+
     @Override
     public String toString() {
         return INDENT + "Node " + nodeIndex + " [State: " + nodeState + ", inAGroup: " + inAGroup + "]";

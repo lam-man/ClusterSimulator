@@ -1,1 +1,58 @@
-<mxGraphModel><root><mxCell id="0"/><mxCell id="1" parent="0"/></root></mxGraphModel>
+<mxfile host="app.diagrams.net" modified="2023-06-12T16:02:27.803Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.57" etag="ljZGVaySTXP8HTi4IyaK" version="21.2.9" type="device">
+  <diagram name="Page-1" id="hEGtWwt6mDSVhTdflPRI">
+    <mxGraphModel dx="1211" dy="663" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="phgTtoWH63cIzDa3qAW5-4" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="265" y="240" width="550" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="phgTtoWH63cIzDa3qAW5-18" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="670" y="310" width="140" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="phgTtoWH63cIzDa3qAW5-17" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="470" y="310" width="190" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="phgTtoWH63cIzDa3qAW5-3" value="Create Cluster" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="250" width="110" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="phgTtoWH63cIzDa3qAW5-5" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="270" y="310" width="190" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="phgTtoWH63cIzDa3qAW5-6" value="node 1" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.pentagon" vertex="1" parent="1">
+          <mxGeometry x="320" y="320" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="phgTtoWH63cIzDa3qAW5-7" value="node 2" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.pentagon" vertex="1" parent="1">
+          <mxGeometry x="370" y="320" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="phgTtoWH63cIzDa3qAW5-8" value="node 4" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.pentagon" vertex="1" parent="1">
+          <mxGeometry x="470" y="320" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="phgTtoWH63cIzDa3qAW5-9" value="node 6" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.pentagon" vertex="1" parent="1">
+          <mxGeometry x="570" y="320" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="phgTtoWH63cIzDa3qAW5-10" value="node 9" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.pentagon" vertex="1" parent="1">
+          <mxGeometry x="720" y="320" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="phgTtoWH63cIzDa3qAW5-11" value="node 5" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.pentagon" vertex="1" parent="1">
+          <mxGeometry x="520" y="320" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="phgTtoWH63cIzDa3qAW5-12" value="node 3" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.pentagon" vertex="1" parent="1">
+          <mxGeometry x="417" y="320" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="phgTtoWH63cIzDa3qAW5-13" value="node 7" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.pentagon" vertex="1" parent="1">
+          <mxGeometry x="620" y="320" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="phgTtoWH63cIzDa3qAW5-14" value="node 8" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.pentagon" vertex="1" parent="1">
+          <mxGeometry x="670" y="320" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="phgTtoWH63cIzDa3qAW5-15" value="node 10" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.pentagon" vertex="1" parent="1">
+          <mxGeometry x="770" y="320" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="phgTtoWH63cIzDa3qAW5-16" value="node 0" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.pentagon" vertex="1" parent="1">
+          <mxGeometry x="270" y="320" width="40" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
