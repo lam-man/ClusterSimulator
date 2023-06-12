@@ -1,10 +1,8 @@
 package org.example;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
-import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 public class Group {
     private static final String INDENT = "    ";
@@ -60,7 +58,7 @@ public class Group {
         return nodes;
     }
 
-    public synchronized void setNodes(CopyOnWriteArrayList<Node> nodes) {
+    public void setNodes(List<Node> nodes) {
         this.nodes = nodes;
     }
 }

@@ -1,7 +1,5 @@
 package org.example;
 
-import java.util.concurrent.locks.ReentrantReadWriteLock;
-
 public class Node {
     private int nodeIndex;
     private boolean inAGroup;

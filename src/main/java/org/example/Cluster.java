@@ -1,10 +1,12 @@
 package org.example;
 
 import java.time.LocalTime;
-import java.util.*;
-import java.util.concurrent.ConcurrentHashMap;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Random;
 import java.util.concurrent.CopyOnWriteArrayList;
-import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 public class Cluster {
 
@@ -75,8 +77,16 @@ public class Cluster {
     public void probe() {
         List<String> unavailableGroups = new ArrayList<>();
         List<Node> unavailableNodes = new ArrayList<>();
-//        int updateDomainIndex = Chaos.updateTrigger(updateDomains);
-        int faultDomainIndex = Chaos.faultTrigger(faultDomains);
+
+        int domainIndex = -1;
+        Random random = new Random();
+        int randomInt = random.nextInt(2);
+        
+        if (randomInt == 0) {
+            domainIndex = Chaos.updateTrigger(updateDomains);
+        } else {
+            domainIndex = Chaos.faultTrigger(faultDomains);
+        }
         report();
         for (Node node : nodePool) {
             if (node.getNodeState() != NodeState.RUNNING) {
@@ -101,8 +111,11 @@ public class Cluster {
         }
 
         report();
-//        Chaos.updateFix(updateDomains, updateDomainIndex);
-        Chaos.faultFix(faultDomains, faultDomainIndex);
+        if (randomInt == 0) {
+            Chaos.updateOrFaultFix(updateDomains, domainIndex, NodeState.UPDATING);
+        } else {
+            Chaos.updateOrFaultFix(faultDomains, domainIndex, NodeState.DOWN);
+        }
 
         try {
             Thread.sleep(2000);

@@ -1,0 +1,862 @@
+Time: 23:01:26.484876100
+myCluster info: [
+    Group Group-3 info: [
+        Node 9 [State: RUNNING, inAGroup: true]
+        Node 10 [State: RUNNING, inAGroup: true]
+        Node 11 [State: RUNNING, inAGroup: true] ]
+    Group Group-2 info: [
+        Node 6 [State: RUNNING, inAGroup: true]
+        Node 7 [State: RUNNING, inAGroup: true]
+        Node 8 [State: RUNNING, inAGroup: true] ]
+    Group Group-4 info: [
+        Node 12 [State: RUNNING, inAGroup: true]
+        Node 13 [State: RUNNING, inAGroup: true]
+        Node 14 [State: RUNNING, inAGroup: true] ]
+    Group Group-1 info: [
+        Node 3 [State: RUNNING, inAGroup: true]
+        Node 4 [State: RUNNING, inAGroup: true]
+        Node 5 [State: RUNNING, inAGroup: true] ]
+    Group Group-0 info: [
+        Node 0 [State: RUNNING, inAGroup: true]
+        Node 1 [State: RUNNING, inAGroup: true]
+        Node 2 [State: RUNNING, inAGroup: true] ]
+    Backup Pool info: [
+        Node 15 [State: RUNNING, inAGroup: false]
+        Node 16 [State: RUNNING, inAGroup: false] ] ]
+Time: 23:01:26.488870200
+myCluster info: [
+    Group Group-3 info: [
+        Node 9 [State: RUNNING, inAGroup: true]
+        Node 10 [State: RUNNING, inAGroup: true]
+        Node 11 [State: RUNNING, inAGroup: true] ]
+    Group Group-2 info: [
+        Node 6 [State: RUNNING, inAGroup: true]
+        Node 7 [State: RUNNING, inAGroup: true]
+        Node 8 [State: RUNNING, inAGroup: true] ]
+    Group Group-4 info: [
+        Node 12 [State: RUNNING, inAGroup: true]
+        Node 13 [State: RUNNING, inAGroup: true]
+        Node 14 [State: RUNNING, inAGroup: true] ]
+    Group Group-1 info: [
+        Node 3 [State: UPDATING, inAGroup: true]
+        Node 4 [State: RUNNING, inAGroup: true]
+        Node 5 [State: RUNNING, inAGroup: true] ]
+    Group Group-0 info: [
+        Node 0 [State: RUNNING, inAGroup: true]
+        Node 1 [State: RUNNING, inAGroup: true]
+        Node 2 [State: UPDATING, inAGroup: true] ]
+    Backup Pool info: [
+        Node 15 [State: RUNNING, inAGroup: false]
+        Node 16 [State: RUNNING, inAGroup: false] ] ]
+Group Group-0 is not available and traffic are rerouted to other groups.
+Group Group-1 is not available and traffic are rerouted to other groups.
+===========Re-group started.===========
+===========Fix cluster by using nodes from backup pool.===========
+===========Not enough healthy nodes for shuffling and wait for auto recover.===========
+Time: 23:01:26.492418500
+myCluster info: [
+    Group Group-3 info: [
+        Node 9 [State: RUNNING, inAGroup: true]
+        Node 10 [State: RUNNING, inAGroup: true]
+        Node 11 [State: RUNNING, inAGroup: true] ]
+    Group Group-2 info: [
+        Node 6 [State: RUNNING, inAGroup: true]
+        Node 7 [State: RUNNING, inAGroup: true]
+        Node 8 [State: RUNNING, inAGroup: true] ]
+    Group Group-4 info: [
+        Node 12 [State: RUNNING, inAGroup: true]
+        Node 13 [State: RUNNING, inAGroup: true]
+        Node 14 [State: RUNNING, inAGroup: true] ]
+    Group Group-1 info: [
+        Node 4 [State: RUNNING, inAGroup: true]
+        Node 5 [State: RUNNING, inAGroup: true]
+        Node 16 [State: RUNNING, inAGroup: true] ]
+    Group Group-0 info: [
+        Node 0 [State: RUNNING, inAGroup: true]
+        Node 1 [State: RUNNING, inAGroup: true]
+        Node 15 [State: RUNNING, inAGroup: true] ]
+    Backup Pool info: [
+        Node 2 [State: UPDATING, inAGroup: false]
+        Node 3 [State: UPDATING, inAGroup: false] ] ]
+Time: 23:01:28.503753800
+myCluster info: [
+    Group Group-3 info: [
+        Node 9 [State: RUNNING, inAGroup: true]
+        Node 10 [State: UPDATING, inAGroup: true]
+        Node 11 [State: UPDATING, inAGroup: true] ]
+    Group Group-2 info: [
+        Node 6 [State: RUNNING, inAGroup: true]
+        Node 7 [State: RUNNING, inAGroup: true]
+        Node 8 [State: RUNNING, inAGroup: true] ]
+    Group Group-4 info: [
+        Node 12 [State: RUNNING, inAGroup: true]
+        Node 13 [State: RUNNING, inAGroup: true]
+        Node 14 [State: RUNNING, inAGroup: true] ]
+    Group Group-1 info: [
+        Node 4 [State: RUNNING, inAGroup: true]
+        Node 5 [State: RUNNING, inAGroup: true]
+        Node 16 [State: RUNNING, inAGroup: true] ]
+    Group Group-0 info: [
+        Node 0 [State: RUNNING, inAGroup: true]
+        Node 1 [State: RUNNING, inAGroup: true]
+        Node 15 [State: RUNNING, inAGroup: true] ]
+    Backup Pool info: [
+        Node 2 [State: RUNNING, inAGroup: false]
+        Node 3 [State: RUNNING, inAGroup: false] ] ]
+Group Group-3 is not available and traffic are rerouted to other groups.
+Group Group-3 is not available and traffic are rerouted to other groups.
+===========Re-group started.===========
+===========Fix cluster by using nodes from backup pool.===========
+===========Not enough healthy nodes for shuffling and wait for auto recover.===========
+Time: 23:01:28.507100600
+myCluster info: [
+    Group Group-3 info: [
+        Node 9 [State: RUNNING, inAGroup: true]
+        Node 2 [State: RUNNING, inAGroup: true]
+        Node 3 [State: RUNNING, inAGroup: true] ]
+    Group Group-2 info: [
+        Node 6 [State: RUNNING, inAGroup: true]
+        Node 7 [State: RUNNING, inAGroup: true]
+        Node 8 [State: RUNNING, inAGroup: true] ]
+    Group Group-4 info: [
+        Node 12 [State: RUNNING, inAGroup: true]
+        Node 13 [State: RUNNING, inAGroup: true]
+        Node 14 [State: RUNNING, inAGroup: true] ]
+    Group Group-1 info: [
+        Node 4 [State: RUNNING, inAGroup: true]
+        Node 5 [State: RUNNING, inAGroup: true]
+        Node 16 [State: RUNNING, inAGroup: true] ]
+    Group Group-0 info: [
+        Node 0 [State: RUNNING, inAGroup: true]
+        Node 1 [State: RUNNING, inAGroup: true]
+        Node 15 [State: RUNNING, inAGroup: true] ]
+    Backup Pool info: [
+        Node 10 [State: UPDATING, inAGroup: false]
+        Node 11 [State: UPDATING, inAGroup: false] ] ]
+Time: 23:01:30.514677400
+myCluster info: [
+    Group Group-3 info: [
+        Node 9 [State: RUNNING, inAGroup: true]
+        Node 2 [State: RUNNING, inAGroup: true]
+        Node 3 [State: RUNNING, inAGroup: true] ]
+    Group Group-2 info: [
+        Node 6 [State: RUNNING, inAGroup: true]
+        Node 7 [State: RUNNING, inAGroup: true]
+        Node 8 [State: RUNNING, inAGroup: true] ]
+    Group Group-4 info: [
+        Node 12 [State: RUNNING, inAGroup: true]
+        Node 13 [State: RUNNING, inAGroup: true]
+        Node 14 [State: RUNNING, inAGroup: true] ]
+    Group Group-1 info: [
+        Node 4 [State: RUNNING, inAGroup: true]
+        Node 5 [State: RUNNING, inAGroup: true]
+        Node 16 [State: RUNNING, inAGroup: true] ]
+    Group Group-0 info: [
+        Node 0 [State: UPDATING, inAGroup: true]
+        Node 1 [State: UPDATING, inAGroup: true]
+        Node 15 [State: RUNNING, inAGroup: true] ]
+    Backup Pool info: [
+        Node 10 [State: RUNNING, inAGroup: false]
+        Node 11 [State: RUNNING, inAGroup: false] ] ]
+Group Group-0 is not available and traffic are rerouted to other groups.
+Group Group-0 is not available and traffic are rerouted to other groups.
+===========Re-group started.===========
+===========Fix cluster by using nodes from backup pool.===========
+===========Not enough healthy nodes for shuffling and wait for auto recover.===========
+Time: 23:01:30.517675400
+        Node 2 [State: RUNNING, inAGroup: true]
+        Node 3 [State: RUNNING, inAGroup: true] ]
+    Group Group-2 info: [
+        Node 6 [State: RUNNING, inAGroup: true]
+        Node 7 [State: RUNNING, inAGroup: true]
+        Node 8 [State: RUNNING, inAGroup: true] ]
+    Group Group-4 info: [
+        Node 12 [State: RUNNING, inAGroup: true]
+        Node 13 [State: RUNNING, inAGroup: true]
+        Node 14 [State: RUNNING, inAGroup: true] ]
+    Group Group-1 info: [
+        Node 4 [State: RUNNING, inAGroup: true]
+        Node 5 [State: RUNNING, inAGroup: true]
+        Node 16 [State: RUNNING, inAGroup: true] ]
+    Group Group-0 info: [
+        Node 15 [State: RUNNING, inAGroup: true]
+        Node 10 [State: RUNNING, inAGroup: true]
+        Node 11 [State: RUNNING, inAGroup: true] ]
+    Backup Pool info: [
+        Node 0 [State: UPDATING, inAGroup: false]
+        Node 1 [State: UPDATING, inAGroup: false] ] ]
+Time: 23:01:42.535281
+myCluster info: [
+    Group Group-3 info: [
+        Node 9 [State: RUNNING, inAGroup: true]
+        Node 2 [State: RUNNING, inAGroup: true]
+        Node 3 [State: RUNNING, inAGroup: true] ]
+    Group Group-2 info: [
+        Node 6 [State: RUNNING, inAGroup: true]
+        Node 7 [State: RUNNING, inAGroup: true]
+        Node 8 [State: RUNNING, inAGroup: true] ]
+    Group Group-4 info: [
+        Node 12 [State: DOWN, inAGroup: true]
+        Node 13 [State: DOWN, inAGroup: true]
+        Node 14 [State: DOWN, inAGroup: true] ]
+    Group Group-1 info: [
+        Node 4 [State: RUNNING, inAGroup: true]
+        Node 5 [State: RUNNING, inAGroup: true]
+        Node 16 [State: RUNNING, inAGroup: true] ]
+    Group Group-0 info: [
+        Node 15 [State: RUNNING, inAGroup: true]
+        Node 10 [State: DOWN, inAGroup: true]
+        Node 11 [State: DOWN, inAGroup: true] ]
+    Backup Pool info: [
+        Node 0 [State: RUNNING, inAGroup: false]
+        Node 1 [State: RUNNING, inAGroup: false] ] ]
+===========Re-group started.===========
+===========Fix cluster by using nodes from backup pool.===========
+===========Not enough healthy nodes for shuffling and wait for auto recover.===========
+Time: 23:01:42.539286300
+myCluster info: [
+    Group Group-3 info: [
+        Node 9 [State: RUNNING, inAGroup: true]
+        Node 2 [State: RUNNING, inAGroup: true]
+        Node 3 [State: RUNNING, inAGroup: true] ]
+    Group Group-2 info: [
+        Node 6 [State: RUNNING, inAGroup: true]
+        Node 7 [State: RUNNING, inAGroup: true]
+        Node 8 [State: RUNNING, inAGroup: true] ]
+    Group Group-4 info: [
+        Node 12 [State: DOWN, inAGroup: true]
+        Node 13 [State: DOWN, inAGroup: true]
+        Node 14 [State: DOWN, inAGroup: true] ]
+    Group Group-1 info: [
+        Node 4 [State: RUNNING, inAGroup: true]
+        Node 5 [State: RUNNING, inAGroup: true]
+        Node 16 [State: RUNNING, inAGroup: true] ]
+    Group Group-0 info: [
+        Node 15 [State: RUNNING, inAGroup: true]
+        Node 0 [State: RUNNING, inAGroup: true]
+        Node 1 [State: RUNNING, inAGroup: true] ]
+    Backup Pool info: [
+        Node 10 [State: DOWN, inAGroup: false]
+        Node 11 [State: DOWN, inAGroup: false] ] ]
+Time: 23:01:44.552299400
+myCluster info: [
+    Group Group-3 info: [
+        Node 9 [State: UPDATING, inAGroup: true]
+        Node 2 [State: RUNNING, inAGroup: true]
+        Node 3 [State: RUNNING, inAGroup: true] ]
+    Group Group-2 info: [
+        Node 6 [State: RUNNING, inAGroup: true]
+        Node 7 [State: RUNNING, inAGroup: true]
+        Node 8 [State: UPDATING, inAGroup: true] ]
+    Group Group-4 info: [
+        Node 12 [State: RUNNING, inAGroup: true]
+        Node 13 [State: RUNNING, inAGroup: true]
+        Node 14 [State: RUNNING, inAGroup: true] ]
+    Group Group-1 info: [
+        Node 4 [State: RUNNING, inAGroup: true]
+        Node 5 [State: RUNNING, inAGroup: true]
+        Node 16 [State: RUNNING, inAGroup: true] ]
+    Group Group-0 info: [
+        Node 15 [State: RUNNING, inAGroup: true]
+        Node 0 [State: RUNNING, inAGroup: true]
+        Node 1 [State: RUNNING, inAGroup: true] ]
+    Backup Pool info: [
+        Node 10 [State: RUNNING, inAGroup: false]
+        Node 11 [State: RUNNING, inAGroup: false] ] ]
+Group Group-2 is not available and traffic are rerouted to other groups.
+Group Group-3 is not available and traffic are rerouted to other groups.
+===========Re-group started.===========
+===========Fix cluster by using nodes from backup pool.===========
+===========Not enough healthy nodes for shuffling and wait for auto recover.===========
+Time: 23:01:44.555584300
+myCluster info: [
+    Group Group-3 info: [
+        Node 2 [State: RUNNING, inAGroup: true]
+        Node 3 [State: RUNNING, inAGroup: true]
+        Node 11 [State: RUNNING, inAGroup: true] ]
+    Group Group-2 info: [
+        Node 6 [State: RUNNING, inAGroup: true]
+        Node 7 [State: RUNNING, inAGroup: true]
+        Node 10 [State: RUNNING, inAGroup: true] ]
+    Group Group-4 info: [
+        Node 12 [State: RUNNING, inAGroup: true]
+        Node 13 [State: RUNNING, inAGroup: true]
+        Node 14 [State: RUNNING, inAGroup: true] ]
+    Group Group-1 info: [
+        Node 4 [State: RUNNING, inAGroup: true]
+        Node 5 [State: RUNNING, inAGroup: true]
+        Node 16 [State: RUNNING, inAGroup: true] ]
+    Group Group-0 info: [
+        Node 15 [State: RUNNING, inAGroup: true]
+        Node 0 [State: RUNNING, inAGroup: true]
+        Node 1 [State: RUNNING, inAGroup: true] ]
+    Backup Pool info: [
+        Node 8 [State: UPDATING, inAGroup: false]
+        Node 9 [State: UPDATING, inAGroup: false] ] ]
+Time: 23:01:46.572613
+myCluster info: [
+    Group Group-3 info: [
+        Node 2 [State: RUNNING, inAGroup: true]
+        Node 3 [State: RUNNING, inAGroup: true]
+        Node 11 [State: RUNNING, inAGroup: true] ]
+    Group Group-2 info: [
+        Node 6 [State: RUNNING, inAGroup: true]
+        Node 7 [State: RUNNING, inAGroup: true]
+        Node 10 [State: RUNNING, inAGroup: true] ]
+    Group Group-4 info: [
+        Node 12 [State: UPDATING, inAGroup: true]
+        Node 13 [State: UPDATING, inAGroup: true]
+        Node 14 [State: RUNNING, inAGroup: true] ]
+    Group Group-1 info: [
+        Node 4 [State: RUNNING, inAGroup: true]
+        Node 5 [State: RUNNING, inAGroup: true]
+        Node 16 [State: RUNNING, inAGroup: true] ]
+    Group Group-0 info: [
+        Node 15 [State: RUNNING, inAGroup: true]
+        Node 0 [State: RUNNING, inAGroup: true]
+        Node 1 [State: RUNNING, inAGroup: true] ]
+    Backup Pool info: [
+        Node 8 [State: RUNNING, inAGroup: false]
+        Node 9 [State: RUNNING, inAGroup: false] ] ]
+Group Group-4 is not available and traffic are rerouted to other groups.
+Group Group-4 is not available and traffic are rerouted to other groups.
+===========Re-group started.===========
+===========Fix cluster by using nodes from backup pool.===========
+===========Not enough healthy nodes for shuffling and wait for auto recover.===========
+Time: 23:01:46.575991
+myCluster info: [
+    Group Group-3 info: [
+        Node 2 [State: RUNNING, inAGroup: true]
+        Node 3 [State: RUNNING, inAGroup: true]
+        Node 11 [State: RUNNING, inAGroup: true] ]
+    Group Group-2 info: [
+        Node 6 [State: RUNNING, inAGroup: true]
+        Node 7 [State: RUNNING, inAGroup: true]
+        Node 10 [State: RUNNING, inAGroup: true] ]
+    Group Group-4 info: [
+        Node 14 [State: RUNNING, inAGroup: true]
+        Node 8 [State: RUNNING, inAGroup: true]
+        Node 9 [State: RUNNING, inAGroup: true] ]
+    Group Group-1 info: [
+        Node 4 [State: RUNNING, inAGroup: true]
+        Node 5 [State: RUNNING, inAGroup: true]
+        Node 16 [State: RUNNING, inAGroup: true] ]
+    Group Group-0 info: [
+        Node 15 [State: RUNNING, inAGroup: true]
+        Node 0 [State: RUNNING, inAGroup: true]
+        Node 1 [State: RUNNING, inAGroup: true] ]
+    Backup Pool info: [
+        Node 12 [State: UPDATING, inAGroup: false]
+        Node 13 [State: UPDATING, inAGroup: false] ] ]
+Time: 23:01:48.583564200
+myCluster info: [
+    Group Group-3 info: [
+        Node 2 [State: RUNNING, inAGroup: true]
+        Node 3 [State: RUNNING, inAGroup: true]
+        Node 11 [State: RUNNING, inAGroup: true] ]
+    Group Group-2 info: [
+        Node 6 [State: RUNNING, inAGroup: true]
+        Node 7 [State: RUNNING, inAGroup: true]
+        Node 10 [State: RUNNING, inAGroup: true] ]
+    Group Group-4 info: [
+        Node 14 [State: UPDATING, inAGroup: true]
+        Node 8 [State: RUNNING, inAGroup: true]
+        Node 9 [State: RUNNING, inAGroup: true] ]
+    Group Group-1 info: [
+        Node 4 [State: RUNNING, inAGroup: true]
+        Node 5 [State: RUNNING, inAGroup: true]
+        Node 16 [State: RUNNING, inAGroup: true] ]
+    Group Group-0 info: [
+        Node 15 [State: UPDATING, inAGroup: true]
+        Node 0 [State: RUNNING, inAGroup: true]
+        Node 1 [State: RUNNING, inAGroup: true] ]
+    Backup Pool info: [
+        Node 12 [State: RUNNING, inAGroup: false]
+        Node 13 [State: RUNNING, inAGroup: false] ] ]
+Group Group-4 is not available and traffic are rerouted to other groups.
+Group Group-0 is not available and traffic are rerouted to other groups.
+===========Re-group started.===========
+===========Fix cluster by using nodes from backup pool.===========
+===========Not enough healthy nodes for shuffling and wait for auto recover.===========
+Time: 23:01:48.587336300
+myCluster info: [
+    Group Group-3 info: [
+        Node 2 [State: RUNNING, inAGroup: true]
+        Node 3 [State: RUNNING, inAGroup: true]
+        Node 11 [State: RUNNING, inAGroup: true] ]
+    Group Group-2 info: [
+        Node 6 [State: RUNNING, inAGroup: true]
+        Node 7 [State: RUNNING, inAGroup: true]
+PS C:\Users\linwe\github\ClusterSimulator> java -jar .\target\ClusterSimulation-1.0-SNAPSHOT.jar "myCluster" 17
+Time: 23:03:29.608699700
+myCluster info: [
+    Group Group-3 info: [
+        Node 9 [State: RUNNING, inAGroup: true]
+        Node 10 [State: RUNNING, inAGroup: true]
+        Node 11 [State: RUNNING, inAGroup: true] ]
+    Group Group-2 info: [
+        Node 6 [State: RUNNING, inAGroup: true]
+        Node 7 [State: RUNNING, inAGroup: true]
+        Node 8 [State: RUNNING, inAGroup: true] ]
+    Group Group-4 info: [
+        Node 12 [State: RUNNING, inAGroup: true]
+        Node 13 [State: RUNNING, inAGroup: true]
+        Node 14 [State: RUNNING, inAGroup: true] ]
+    Group Group-1 info: [
+        Node 3 [State: RUNNING, inAGroup: true]
+        Node 4 [State: RUNNING, inAGroup: true]
+        Node 5 [State: RUNNING, inAGroup: true] ]
+    Group Group-0 info: [
+        Node 0 [State: RUNNING, inAGroup: true]
+        Node 1 [State: RUNNING, inAGroup: true]
+        Node 2 [State: RUNNING, inAGroup: true] ]
+    Backup Pool info: [
+        Node 15 [State: RUNNING, inAGroup: false]
+        Node 16 [State: RUNNING, inAGroup: false] ] ]
+Time: 23:03:29.612426100
+myCluster info: [
+    Group Group-3 info: [
+        Node 9 [State: RUNNING, inAGroup: true]
+        Node 10 [State: RUNNING, inAGroup: true]
+        Node 11 [State: RUNNING, inAGroup: true] ]
+    Group Group-2 info: [
+        Node 6 [State: RUNNING, inAGroup: true]
+        Node 7 [State: RUNNING, inAGroup: true]
+        Node 8 [State: RUNNING, inAGroup: true] ]
+    Group Group-4 info: [
+        Node 12 [State: UPDATING, inAGroup: true]
+        Node 13 [State: UPDATING, inAGroup: true]
+        Node 14 [State: RUNNING, inAGroup: true] ]
+    Group Group-1 info: [
+        Node 3 [State: RUNNING, inAGroup: true]
+        Node 4 [State: RUNNING, inAGroup: true]
+        Node 5 [State: RUNNING, inAGroup: true] ]
+    Group Group-0 info: [
+        Node 0 [State: RUNNING, inAGroup: true]
+        Node 1 [State: RUNNING, inAGroup: true]
+        Node 2 [State: RUNNING, inAGroup: true] ]
+    Backup Pool info: [
+        Node 15 [State: RUNNING, inAGroup: false]
+        Node 16 [State: RUNNING, inAGroup: false] ] ]
+Group Group-4 is not available and traffic are rerouted to other groups.
+Group Group-4 is not available and traffic are rerouted to other groups.
+===========Re-group started.===========
+===========Fix cluster by using nodes from backup pool.===========
+===========Not enough healthy nodes for shuffling and wait for auto recover.===========
+        Node 7 [State: RUNNING, inAGroup: true]
+        Node 8 [State: RUNNING, inAGroup: true] ]
+    Group Group-4 info: [
+        Node 14 [State: RUNNING, inAGroup: true]
+        Node 15 [State: RUNNING, inAGroup: true]
+        Node 16 [State: RUNNING, inAGroup: true] ]
+    Group Group-1 info: [
+        Node 3 [State: RUNNING, inAGroup: true]
+        Node 4 [State: RUNNING, inAGroup: true]
+        Node 5 [State: RUNNING, inAGroup: true] ]
+    Group Group-0 info: [
+        Node 0 [State: RUNNING, inAGroup: true]
+        Node 1 [State: RUNNING, inAGroup: true]
+        Node 2 [State: RUNNING, inAGroup: true] ]
+    Backup Pool info: [
+        Node 12 [State: UPDATING, inAGroup: false]
+        Node 13 [State: UPDATING, inAGroup: false] ] ]
+Time: 23:03:41.635006400
+myCluster info: [
+    Group Group-3 info: [
+        Node 9 [State: RUNNING, inAGroup: true]
+        Node 10 [State: RUNNING, inAGroup: true]
+        Node 11 [State: RUNNING, inAGroup: true] ]
+    Group Group-2 info: [
+        Node 6 [State: RUNNING, inAGroup: true]
+        Node 7 [State: RUNNING, inAGroup: true]
+        Node 8 [State: RUNNING, inAGroup: true] ]
+    Group Group-4 info: [
+        Node 14 [State: RUNNING, inAGroup: true]
+        Node 15 [State: RUNNING, inAGroup: true]
+        Node 16 [State: RUNNING, inAGroup: true] ]
+    Group Group-1 info: [
+        Node 3 [State: DOWN, inAGroup: true]
+        Node 4 [State: DOWN, inAGroup: true]
+        Node 5 [State: RUNNING, inAGroup: true] ]
+    Group Group-0 info: [
+        Node 0 [State: DOWN, inAGroup: true]
+        Node 1 [State: DOWN, inAGroup: true]
+        Node 2 [State: DOWN, inAGroup: true] ]
+    Backup Pool info: [
+        Node 12 [State: RUNNING, inAGroup: false]
+        Node 13 [State: RUNNING, inAGroup: false] ] ]
+===========Re-group started.===========
+===========Fix cluster by using nodes from backup pool.===========
+===========Fix cluster by shuffle and re-group nodes.===========
+Time: 23:03:41.635006400
+myCluster info: [
+    Group Group-3 info: [
+        Node 9 [State: RUNNING, inAGroup: true]
+        Node 10 [State: RUNNING, inAGroup: true]
+        Node 11 [State: RUNNING, inAGroup: true] ]
+    Group Group-2 info: [
+        Node 6 [State: RUNNING, inAGroup: true]
+        Node 7 [State: RUNNING, inAGroup: true]
+        Node 8 [State: RUNNING, inAGroup: true] ]
+    Group Group-4 info: [
+        Node 14 [State: RUNNING, inAGroup: true]
+        Node 15 [State: RUNNING, inAGroup: true]
+        Node 16 [State: RUNNING, inAGroup: true] ]
+    Group Group-1 info: [
+        Node 3 [State: DOWN, inAGroup: true]
+        Node 4 [State: DOWN, inAGroup: true]
+        Node 5 [State: RUNNING, inAGroup: true] ]
+    Group Group-0 info: [
+        Node 2 [State: DOWN, inAGroup: true]
+        Node 12 [State: RUNNING, inAGroup: true]
+        Node 13 [State: RUNNING, inAGroup: true] ]
+    Backup Pool info: [
+        Node 0 [State: DOWN, inAGroup: false]
+        Node 1 [State: DOWN, inAGroup: false] ] ]
+Time: 23:03:53.653463500
+myCluster info: [
+    Group Group-3 info: [
+        Node 9 [State: RUNNING, inAGroup: true]
+        Node 10 [State: RUNNING, inAGroup: true]
+        Node 11 [State: RUNNING, inAGroup: true] ]
+    Group Group-2 info: [
+        Node 6 [State: RUNNING, inAGroup: true]
+        Node 7 [State: RUNNING, inAGroup: true]
+        Node 8 [State: RUNNING, inAGroup: true] ]
+    Group Group-4 info: [
+        Node 14 [State: RUNNING, inAGroup: true]
+        Node 15 [State: RUNNING, inAGroup: true]
+        Node 16 [State: RUNNING, inAGroup: true] ]
+    Group Group-1 info: [
+        Node 3 [State: DOWN, inAGroup: true]
+        Node 4 [State: DOWN, inAGroup: true]
+        Node 5 [State: RUNNING, inAGroup: true] ]
+    Group Group-0 info: [
+        Node 2 [State: DOWN, inAGroup: true]
+        Node 12 [State: RUNNING, inAGroup: true]
+        Node 13 [State: RUNNING, inAGroup: true] ]
+    Backup Pool info: [
+        Node 0 [State: DOWN, inAGroup: false]
+        Node 1 [State: DOWN, inAGroup: false] ] ]
+Group Group-0 is not available and traffic are rerouted to other groups.
+Group Group-1 is not available and traffic are rerouted to other groups.
+Group Group-1 is not available and traffic are rerouted to other groups.
+===========Re-group started.===========
+===========Fix cluster by using nodes from backup pool.===========
+===========Fix cluster by shuffle and re-group nodes.===========
+Time: 23:03:53.657980200
+myCluster info: [
+    Group Group-3 info: [
+        Node 9 [State: RUNNING, inAGroup: true]
+        Node 10 [State: RUNNING, inAGroup: true]
+        Node 11 [State: RUNNING, inAGroup: true] ]
+    Group Group-2 info: [
+        Node 6 [State: RUNNING, inAGroup: true]
+        Node 7 [State: RUNNING, inAGroup: true]
+        Node 8 [State: RUNNING, inAGroup: true] ]
+    Group Group-4 info: [
+        Node 14 [State: RUNNING, inAGroup: true]
+        Node 15 [State: RUNNING, inAGroup: true]
+        Node 16 [State: RUNNING, inAGroup: true] ]
+    Group Group-1 info: [
+        Node 5 [State: RUNNING, inAGroup: true] ]
+    Group Group-0 info: [
+        Node 12 [State: RUNNING, inAGroup: true]
+        Node 13 [State: RUNNING, inAGroup: true] ]
+    Backup Pool info: [
+        Node 0 [State: DOWN, inAGroup: false]
+        Node 1 [State: DOWN, inAGroup: false] ] ]
+Time: 23:03:55.660153700
+myCluster info: [
+    Group Group-3 info: [
+        Node 9 [State: RUNNING, inAGroup: true]
+        Node 10 [State: UPDATING, inAGroup: true]
+        Node 11 [State: UPDATING, inAGroup: true] ]
+    Group Group-2 info: [
+        Node 6 [State: RUNNING, inAGroup: true]
+        Node 7 [State: RUNNING, inAGroup: true]
+        Node 8 [State: RUNNING, inAGroup: true] ]
+    Group Group-4 info: [
+        Node 14 [State: RUNNING, inAGroup: true]
+        Node 15 [State: RUNNING, inAGroup: true]
+        Node 16 [State: RUNNING, inAGroup: true] ]
+    Group Group-1 info: [
+        Node 5 [State: RUNNING, inAGroup: true] ]
+    Group Group-0 info: [
+        Node 12 [State: RUNNING, inAGroup: true]
+        Node 13 [State: RUNNING, inAGroup: true] ]
+    Backup Pool info: [
+        Node 0 [State: RUNNING, inAGroup: false]
+        Node 1 [State: RUNNING, inAGroup: false] ] ]
+Group Group-3 is not available and traffic are rerouted to other groups.
+Group Group-3 is not available and traffic are rerouted to other groups.
+===========Re-group started.===========
+===========Fix cluster by using nodes from backup pool.===========
+===========Not enough healthy nodes for shuffling and wait for auto recover.===========
+Time: 23:03:55.663153200
+myCluster info: [
+    Group Group-3 info: [
+        Node 9 [State: RUNNING, inAGroup: true]
+        Node 0 [State: RUNNING, inAGroup: true]
+        Node 1 [State: RUNNING, inAGroup: true] ]
+    Group Group-2 info: [
+        Node 6 [State: RUNNING, inAGroup: true]
+        Node 7 [State: RUNNING, inAGroup: true]
+        Node 8 [State: RUNNING, inAGroup: true] ]
+    Group Group-4 info: [
+        Node 14 [State: RUNNING, inAGroup: true]
+        Node 15 [State: RUNNING, inAGroup: true]
+        Node 16 [State: RUNNING, inAGroup: true] ]
+    Group Group-1 info: [
+        Node 5 [State: RUNNING, inAGroup: true] ]
+    Group Group-0 info: [
+        Node 12 [State: RUNNING, inAGroup: true]
+        Node 13 [State: RUNNING, inAGroup: true] ]
+    Backup Pool info: [
+        Node 10 [State: UPDATING, inAGroup: false]
+        Node 11 [State: UPDATING, inAGroup: false] ] ]
+Time: 23:04:07.680015100
+myCluster info: [
+    Group Group-3 info: [
+        Node 9 [State: RUNNING, inAGroup: true]
+        Node 0 [State: DOWN, inAGroup: true]
+        Node 1 [State: DOWN, inAGroup: true] ]
+    Group Group-2 info: [
+        Node 6 [State: RUNNING, inAGroup: true]
+        Node 7 [State: RUNNING, inAGroup: true]
+        Node 8 [State: RUNNING, inAGroup: true] ]
+    Group Group-4 info: [
+        Node 14 [State: RUNNING, inAGroup: true]
+        Node 15 [State: RUNNING, inAGroup: true]
+        Node 16 [State: RUNNING, inAGroup: true] ]
+    Group Group-1 info: [
+        Node 5 [State: RUNNING, inAGroup: true] ]
+    Group Group-0 info: [
+        Node 12 [State: RUNNING, inAGroup: true]
+        Node 13 [State: RUNNING, inAGroup: true] ]
+    Backup Pool info: [
+        Node 10 [State: RUNNING, inAGroup: false]
+        Node 11 [State: RUNNING, inAGroup: false] ] ]
+===========Re-group started.===========
+===========Fix cluster by using nodes from backup pool.===========
+===========Fix cluster by shuffle and re-group nodes.===========
+Time: 23:04:07.683015100
+myCluster info: [
+    Group Group-3 info: [
+        Node 9 [State: RUNNING, inAGroup: true]
+        Node 10 [State: RUNNING, inAGroup: true]
+        Node 11 [State: RUNNING, inAGroup: true] ]
+    Group Group-2 info: [
+        Node 6 [State: RUNNING, inAGroup: true]
+        Node 7 [State: RUNNING, inAGroup: true]
+        Node 8 [State: RUNNING, inAGroup: true] ]
+    Group Group-4 info: [
+        Node 14 [State: RUNNING, inAGroup: true]
+        Node 15 [State: RUNNING, inAGroup: true]
+        Node 16 [State: RUNNING, inAGroup: true] ]
+    Group Group-1 info: [
+        Node 5 [State: RUNNING, inAGroup: true] ]
+    Group Group-0 info: [
+        Node 12 [State: RUNNING, inAGroup: true]
+        Node 13 [State: RUNNING, inAGroup: true] ]
+    Backup Pool info: [
+        Node 0 [State: DOWN, inAGroup: false]
+        Node 1 [State: DOWN, inAGroup: false] ] ]
+Time: 23:04:09.685747400
+myCluster info: [
+    Group Group-3 info: [
+        Node 9 [State: RUNNING, inAGroup: true]
+        Node 10 [State: UPDATING, inAGroup: true]
+        Node 11 [State: UPDATING, inAGroup: true] ]
+    Group Group-2 info: [
+        Node 6 [State: RUNNING, inAGroup: true]
+        Node 7 [State: RUNNING, inAGroup: true]
+        Node 8 [State: RUNNING, inAGroup: true] ]
+    Group Group-4 info: [
+        Node 14 [State: RUNNING, inAGroup: true]
+        Node 15 [State: RUNNING, inAGroup: true]
+        Node 16 [State: RUNNING, inAGroup: true] ]
+    Group Group-1 info: [
+        Node 5 [State: RUNNING, inAGroup: true] ]
+    Group Group-0 info: [
+        Node 12 [State: RUNNING, inAGroup: true]
+        Node 13 [State: RUNNING, inAGroup: true] ]
+    Backup Pool info: [
+        Node 0 [State: RUNNING, inAGroup: false]
+        Node 1 [State: RUNNING, inAGroup: false] ] ]
+Group Group-3 is not available and traffic are rerouted to other groups.
+Group Group-3 is not available and traffic are rerouted to other groups.
+===========Re-group started.===========
+===========Fix cluster by using nodes from backup pool.===========
+===========Not enough healthy nodes for shuffling and wait for auto recover.===========
+Time: 23:04:09.688991700
+myCluster info: [
+    Group Group-3 info: [
+        Node 9 [State: RUNNING, inAGroup: true]
+        Node 0 [State: RUNNING, inAGroup: true]
+        Node 1 [State: RUNNING, inAGroup: true] ]
+    Group Group-2 info: [
+        Node 6 [State: RUNNING, inAGroup: true]
+        Node 7 [State: RUNNING, inAGroup: true]
+        Node 8 [State: RUNNING, inAGroup: true] ]
+    Group Group-4 info: [
+        Node 14 [State: RUNNING, inAGroup: true]
+        Node 15 [State: RUNNING, inAGroup: true]
+        Node 16 [State: RUNNING, inAGroup: true] ]
+    Group Group-1 info: [
+        Node 5 [State: RUNNING, inAGroup: true] ]
+    Group Group-0 info: [
+        Node 12 [State: RUNNING, inAGroup: true]
+        Node 13 [State: RUNNING, inAGroup: true] ]
+    Backup Pool info: [
+        Node 10 [State: UPDATING, inAGroup: false]
+        Node 11 [State: UPDATING, inAGroup: false] ] ]
+Time: 23:04:11.694499300
+myCluster info: [
+    Group Group-3 info: [
+        Node 9 [State: RUNNING, inAGroup: true]
+        Node 0 [State: RUNNING, inAGroup: true]
+        Node 1 [State: RUNNING, inAGroup: true] ]
+    Group Group-2 info: [
+        Node 6 [State: UPDATING, inAGroup: true]
+        Node 7 [State: UPDATING, inAGroup: true]
+        Node 8 [State: RUNNING, inAGroup: true] ]
+    Group Group-4 info: [
+        Node 14 [State: RUNNING, inAGroup: true]
+        Node 15 [State: RUNNING, inAGroup: true]
+        Node 16 [State: RUNNING, inAGroup: true] ]
+    Group Group-1 info: [
+        Node 5 [State: RUNNING, inAGroup: true] ]
+    Group Group-0 info: [
+        Node 12 [State: RUNNING, inAGroup: true]
+        Node 13 [State: RUNNING, inAGroup: true] ]
+    Backup Pool info: [
+        Node 10 [State: RUNNING, inAGroup: false]
+        Node 11 [State: RUNNING, inAGroup: false] ] ]
+Group Group-2 is not available and traffic are rerouted to other groups.
+Group Group-2 is not available and traffic are rerouted to other groups.
+===========Re-group started.===========
+===========Fix cluster by using nodes from backup pool.===========
+===========Not enough healthy nodes for shuffling and wait for auto recover.===========
+Time: 23:04:11.697498100
+myCluster info: [
+    Group Group-3 info: [
+        Node 9 [State: RUNNING, inAGroup: true]
+        Node 0 [State: RUNNING, inAGroup: true]
+        Node 1 [State: RUNNING, inAGroup: true] ]
+    Group Group-2 info: [
+        Node 8 [State: RUNNING, inAGroup: true]
+        Node 10 [State: RUNNING, inAGroup: true]
+        Node 11 [State: RUNNING, inAGroup: true] ]
+    Group Group-4 info: [
+        Node 14 [State: RUNNING, inAGroup: true]
+        Node 15 [State: RUNNING, inAGroup: true]
+        Node 16 [State: RUNNING, inAGroup: true] ]
+    Group Group-1 info: [
+        Node 5 [State: RUNNING, inAGroup: true] ]
+    Group Group-0 info: [
+        Node 12 [State: RUNNING, inAGroup: true]
+        Node 13 [State: RUNNING, inAGroup: true] ]
+    Backup Pool info: [
+        Node 6 [State: UPDATING, inAGroup: false]
+        Node 7 [State: UPDATING, inAGroup: false] ] ]
+Time: 23:04:13.714197900
+myCluster info: [
+    Group Group-3 info: [
+        Node 9 [State: RUNNING, inAGroup: true]
+        Node 0 [State: RUNNING, inAGroup: true]
+        Node 1 [State: RUNNING, inAGroup: true] ]
+    Group Group-2 info: [
+        Node 8 [State: RUNNING, inAGroup: true]
+        Node 10 [State: UPDATING, inAGroup: true]
+        Node 11 [State: UPDATING, inAGroup: true] ]
+    Group Group-4 info: [
+        Node 14 [State: RUNNING, inAGroup: true]
+        Node 15 [State: RUNNING, inAGroup: true]
+        Node 16 [State: RUNNING, inAGroup: true] ]
+    Group Group-1 info: [
+        Node 5 [State: RUNNING, inAGroup: true] ]
+    Group Group-0 info: [
+        Node 12 [State: RUNNING, inAGroup: true]
+        Node 13 [State: RUNNING, inAGroup: true] ]
+    Backup Pool info: [
+        Node 6 [State: RUNNING, inAGroup: false]
+        Node 7 [State: RUNNING, inAGroup: false] ] ]
+Group Group-2 is not available and traffic are rerouted to other groups.
+Group Group-2 is not available and traffic are rerouted to other groups.
+===========Re-group started.===========
+===========Fix cluster by using nodes from backup pool.===========
+===========Not enough healthy nodes for shuffling and wait for auto recover.===========
+Time: 23:04:13.717194300
+myCluster info: [
+    Group Group-3 info: [
+        Node 9 [State: RUNNING, inAGroup: true]
+        Node 0 [State: RUNNING, inAGroup: true]
+        Node 1 [State: RUNNING, inAGroup: true] ]
+    Group Group-2 info: [
+        Node 8 [State: RUNNING, inAGroup: true]
+        Node 6 [State: RUNNING, inAGroup: true]
+        Node 7 [State: RUNNING, inAGroup: true] ]
+    Group Group-4 info: [
+        Node 14 [State: RUNNING, inAGroup: true]
+        Node 15 [State: RUNNING, inAGroup: true]
+        Node 16 [State: RUNNING, inAGroup: true] ]
+    Group Group-1 info: [
+        Node 5 [State: RUNNING, inAGroup: true] ]
+    Group Group-0 info: [
+        Node 12 [State: RUNNING, inAGroup: true]
+        Node 13 [State: RUNNING, inAGroup: true] ]
+    Backup Pool info: [
+        Node 10 [State: UPDATING, inAGroup: false]
+        Node 11 [State: UPDATING, inAGroup: false] ] ]
+Time: 23:04:15.729084100
+myCluster info: [
+    Group Group-3 info: [
+        Node 9 [State: RUNNING, inAGroup: true]
+        Node 0 [State: RUNNING, inAGroup: true]
+        Node 1 [State: RUNNING, inAGroup: true] ]
+    Group Group-2 info: [
+        Node 8 [State: RUNNING, inAGroup: true]
+        Node 6 [State: RUNNING, inAGroup: true]
+        Node 7 [State: RUNNING, inAGroup: true] ]
+    Group Group-4 info: [
+        Node 14 [State: RUNNING, inAGroup: true]
+        Node 15 [State: RUNNING, inAGroup: true]
+        Node 16 [State: RUNNING, inAGroup: true] ]
+    Group Group-1 info: [
+        Node 5 [State: RUNNING, inAGroup: true] ]
+    Group Group-0 info: [
+        Node 12 [State: RUNNING, inAGroup: true]
+        Node 13 [State: RUNNING, inAGroup: true] ]
+    Backup Pool info: [
+        Node 10 [State: RUNNING, inAGroup: false]
+        Node 11 [State: RUNNING, inAGroup: false] ] ]
+Group Group-0 is not available and traffic are rerouted to other groups.
+Group Group-1 is not available and traffic are rerouted to other groups.
+===========Re-group started.===========
+===========Fix cluster by using nodes from backup pool.===========
+===========Not enough healthy nodes for shuffling and wait for auto recover.===========
+Time: 23:04:15.732087800
+myCluster info: [
+    Group Group-3 info: [
+        Node 9 [State: RUNNING, inAGroup: true]
+        Node 0 [State: RUNNING, inAGroup: true]
+        Node 1 [State: RUNNING, inAGroup: true] ]
+    Group Group-2 info: [
+        Node 8 [State: RUNNING, inAGroup: true]
+        Node 6 [State: RUNNING, inAGroup: true]
+        Node 7 [State: RUNNING, inAGroup: true] ]
+    Group Group-4 info: [
+        Node 14 [State: RUNNING, inAGroup: true]
+        Node 15 [State: RUNNING, inAGroup: true]
+        Node 16 [State: RUNNING, inAGroup: true] ]
+    Group Group-1 info: [
+        Node 5 [State: RUNNING, inAGroup: true]
+        Node 11 [State: RUNNING, inAGroup: true] ]
+    Group Group-0 info: [
+        Node 12 [State: RUNNING, inAGroup: true]
+        Node 13 [State: RUNNING, inAGroup: true]
+        Node 10 [State: RUNNING, inAGroup: true] ]
+    Backup Pool info: [
+        Node 2 [State: UPDATING, inAGroup: false]
+        Node 3 [State: UPDATING, inAGroup: false] ] ]
